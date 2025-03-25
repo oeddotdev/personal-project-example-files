@@ -1,15 +1,20 @@
-// confetti.js
+// confettiButton.js
 
-// Wait for the DOM to be fully loaded before initializing
 document.addEventListener('DOMContentLoaded', function () {
-  const confettiButton = document.getElementById('confettiButton');
+  // Get the button element and canvas element
+  const button = document.getElementById('button');
+  const canvas = document.getElementById('canvas');
+  
+  // Initialize the canvas for confetti
+  const confettiSettings = { target: canvas };
 
-  // Confetti effect triggered by button click
-  confettiButton.addEventListener('click', () => {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { x: 0.5, y: 0.5 },
-    });
+  // Handle the button click to trigger confetti
+  button.addEventListener('click', () => {
+    // Start confetti effect when the button is clicked
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();  // Start confetti animation
+
+    // Optionally, change button text after confetti is triggered
+    button.querySelector('.button-text').textContent = 'Success!';
   });
 });
