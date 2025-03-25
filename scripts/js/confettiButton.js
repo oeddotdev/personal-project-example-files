@@ -108,6 +108,7 @@ const render = () => {
   window.requestAnimationFrame(render);
 };
 
+// Move clickButton to the top to avoid reference errors
 const clickButton = () => {
   if (!disabled) {
     disabled = true;
