@@ -1,217 +1,174 @@
 @keyframes loading {
-    0% { cy: 10; }
-    25% { cy: 3; }
-    50% { cy: 10; }
+    0% { cy: 10 !important; }
+    25% { cy: 3 !important; }
+    50% { cy: 10 !important; }
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    background-color: #f4f7ff;
+    -webkit-font-smoothing: antialiased !important;
+    background-color: #f4f7ff !important;
 }
 
 canvas {
-    height: 100vh;
-    pointer-events: none;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
+    height: 100vh !important;
+    pointer-events: none !important;
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 2 !important;
 }
 
-button {
-    background: none;
-    border: none;
-    color: #f4f7ff;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    height: 40px;
-    left: 50%;
-    outline: none;
-    overflow: hidden;
-    padding: 0 10px;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 190px;
-    -webkit-tap-highlight-color: transparent;
-    z-index: 1;
+#button {
+    background: none !important;
+    border: none !important;
+    color: #f4f7ff !important;
+    cursor: pointer !important;
+    font-family: 'Quicksand', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    height: 40px !important;
+    left: 50% !important;
+    outline: none !important;
+    overflow: hidden !important;
+    padding: 0 10px !important;
+    position: fixed !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 190px !important;
+    -webkit-tap-highlight-color: transparent !important;
+    z-index: 1 !important;
 }
 
-button::before {
-    background: #1f2335;
-    border-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .4) inset;
-    content: '';
-    display: block;
-    height: 100%;
-    margin: 0 auto;
-    position: relative;
-    transition: width 0.2s cubic-bezier(0.39, 1.86, 0.64, 1) 0.3s;
-    width: 100%;
+#button::before {
+    background: #1f2335 !important;
+    border-radius: 50px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .4) inset !important;
+    content: '' !important;
+    display: block !important;
+    height: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    transition: width 0.2s cubic-bezier(0.39, 1.86, 0.64, 1) 0.3s !important;
+    width: 100% !important;
 }
 
-button.ready .submitMessage svg {
-    opacity: 1;
-    top: 1px;
-    transition: top 0.4s ease 600ms, opacity 0.3s linear 600ms;
+#button.ready .submitMessage svg {
+    opacity: 1 !important;
+    top: 1px !important;
+    transition: top 0.4s ease 600ms, opacity 0.3s linear 600ms !important;
 }
 
-button.ready .submitMessage .button-text span {
-    top: 0;
-    opacity: 1;
-    transition: all 0.2s ease calc(var(--dr) + 600ms);
+#button.ready .submitMessage .button-text span {
+    top: 0 !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease calc(var(--dr) + 600ms) !important;
 }
 
-button.loading::before {
-    transition: width 0.3s ease;
-    width: 80%;
+#button.loading::before {
+    transition: width 0.3s ease !important;
+    width: 80% !important;
 }
 
-button.loading .loadingMessage {
-    opacity: 1;
+#button.loading .loadingMessage {
+    opacity: 1 !important;
 }
 
-button.loading .loadingCircle {
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-name: loading;
-    cy: 10;
+#button.loading .loadingCircle {
+    animation-duration: 1s !important;
+    animation-iteration-count: infinite !important;
+    animation-name: loading !important;
+    cy: 10 !important;
 }
 
-button.complete .submitMessage svg {
-    top: -30px;
-    transition: none;
+#button.complete .submitMessage svg {
+    top: -30px !important;
+    transition: none !important;
 }
 
-button.complete .submitMessage .button-text span {
-    top: -8px;
-    transition: none;
+#button.complete .submitMessage .button-text span {
+    top: -8px !important;
+    transition: none !important;
 }
 
-button.complete .loadingMessage {
-    top: 80px;
+#button.complete .loadingMessage {
+    top: 80px !important;
 }
 
-button.complete .successMessage .button-text span {
-    left: 0;
-    opacity: 1;
-    transition: all 0.2s ease calc(var(--d) + 1000ms);
+#button.complete .successMessage .button-text span {
+    left: 0 !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease calc(var(--d) + 1000ms) !important;
 }
 
-button.complete .successMessage svg {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 0.3s ease-in-out 1.4s;
+#button.complete .successMessage svg {
+    stroke-dashoffset: 0 !important;
+    transition: stroke-dashoffset 0.3s ease-in-out 1.4s !important;
 }
 
 .button-text span {
-    opacity: 0;
-    position: relative;
+    opacity: 0 !important;
+    position: relative !important;
 }
 
 .message {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    left: 50% !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
 }
 
 .message svg {
-    display: inline-block;
-    fill: none;
-    margin-right: 5px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 2;
+    display: inline-block !important;
+    fill: none !important;
+    margin-right: 5px !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    stroke-width: 2 !important;
 }
 
 .submitMessage .button-text span {
-    top: 8px;
-    transition: all 0.2s ease var(--d);
+    top: 8px !important;
+    transition: all 0.2s ease var(--d) !important;
 }
 
 .submitMessage svg {
-    color: #5c86ff;
-    margin-left: -1px;
-    opacity: 0;
-    position: relative;
-    top: 30px;
-    transition: top 0.4s ease, opacity 0.3s linear;
-    width: 14px;
+    color: #5c86ff !important;
+    margin-left: -1px !important;
+    opacity: 0 !important;
+    position: relative !important;
+    top: 30px !important;
+    transition: top 0.4s ease, opacity 0.3s linear !important;
+    width: 14px !important;
 }
 
 .loadingMessage {
-    opacity: 0;
-    transition: opacity 0.3s linear 0.3s, top 0.4s cubic-bezier(0.22, 0, 0.41, -0.57);
+    opacity: 0 !important;
+    transition: opacity 0.3s linear 0.3s, top 0.4s cubic-bezier(0.22, 0, 0.41, -0.57) !important;
 }
 
 .loadingMessage svg {
-    fill: #5c86ff;
-    margin: 0;
-    width: 22px;
+    fill: #5c86ff !important;
+    margin: 0 !important;
+    width: 22px !important;
 }
 
 .successMessage .button-text span {
-    left: 5px;
-    transition: all 0.2s ease var(--dr);
+    left: 5px !important;
+    transition: all 0.2s ease var(--dr) !important;
 }
 
 .successMessage svg {
-    color: #5cffa1;
-    stroke-dasharray: 20;
-    stroke-dashoffset: 20;
-    transition: stroke-dashoffset 0.3s ease-in-out;
-    width: 14px;
+    color: #5cffa1 !important;
+    stroke-dasharray: 20 !important;
+    stroke-dashoffset: 20 !important;
+    transition: stroke-dashoffset 0.3s ease-in-out !important;
+    width: 14px !important;
 }
 
 .loadingCircle:nth-child(2) {
-    animation-delay: 0.1s;
+    animation-delay: 0.1s !important;
 }
 
 .loadingCircle:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-/* Website Link */
-.website-link {
-    background: #f8faff;
-    border-radius: 50px 0 0 50px;
-    bottom: 30px;
-    color: #324b77;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    height: 34px;
-    filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, .1));
-    padding: 0 20px 0 40px;
-    position: fixed;
-    right: 0;
-    text-align: left;
-    text-decoration: none;
-}
-
-.website-link__icon {
-    left: -10px;
-    position: absolute;
-    top: -12px;
-    width: 44px;
-}
-
-.website-link__name {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    margin: 5px 0 3px;
-}
-
-.website-link__last-name {
-    color: #55bada;
-}
-
-.website-link__message {
-    color: #8aa8c5;
-    display: block;
-    font-size: 7px;
-    line-height: 7px;
+    animation-delay: 0.2s !important;
 }
